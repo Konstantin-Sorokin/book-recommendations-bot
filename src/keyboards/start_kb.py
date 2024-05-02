@@ -2,9 +2,9 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
 class StartButton:
+    RECOMMENDATIONS = "Рекомендации"
+    NEW_BOOKS = "Новинки"
     PROFILE = "Профиль"
-    PREDICTIONS = "Прогнозы"
-    SEASONS = "Сезоны"
 
 
 def get_start_kb():
@@ -13,8 +13,8 @@ def get_start_kb():
         one_time_keyboard=True,
         keyboard=[
             [
-                KeyboardButton(text=StartButton.PREDICTIONS),
-                KeyboardButton(text=StartButton.SEASONS),
+                KeyboardButton(text=StartButton.RECOMMENDATIONS),
+                KeyboardButton(text=StartButton.NEW_BOOKS),
             ],
             [
                 KeyboardButton(text=StartButton.PROFILE),
