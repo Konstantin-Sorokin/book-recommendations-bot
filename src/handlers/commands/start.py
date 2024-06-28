@@ -10,5 +10,5 @@ router = Router(name=__name__)
 async def handle_start_command(message: types.Message):
     await message.answer(
         text="Hello",
-        reply_markup=get_start_kb(),
+        reply_markup=get_start_kb(message.from_user.id),
     )
